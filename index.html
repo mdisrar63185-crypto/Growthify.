@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eliteora Academy | Learn Today. Lead Tomorrow.</title>
+<meta name="description" content="Eliteora Academy is a demo professional education institute website with courses, admissions, counselling booking and AI student support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101B3C;--blue:#3157A4;--gold:#D4AF65;--bg:#F8F9FC;--card:#fff;--text:#202B3C;--head:#101B3C;--line:#e2e6ef;--shadow:0 12px 32px rgba(16,27,60,.09);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1230;--card:#131f45;--text:#cdd6e6;--head:#fff;--line:#27386b;--shadow:0 12px 32px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--head);line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,6.5vw,4.6rem)}h2{font-size:clamp(1.8rem,4vw,2.8rem)}h3{font-size:1.2rem}
+a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}section{padding:76px 0}.alt{background:var(--card)}
+.center{text-align:center}.lead{max-width:60ch}.center .lead{margin:0 auto 2rem}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.16em;font-size:.76rem;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(212,175,101,.35)}.btn-gold{background:var(--gold);color:var(--navy)}.btn-blue{background:var(--blue);color:#fff}.btn-out{border-color:rgba(255,255,255,.55);color:#fff}.btn-line{border-color:var(--blue);color:var(--blue);background:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-line{color:var(--gold);border-color:var(--gold)}}
+.sm{padding:9px 16px;font-size:.85rem}:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{position:sticky;top:0;z-index:50;background:rgba(16,27,60,.97);backdrop-filter:blur(10px);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}.logo b{font-family:'Playfair Display',serif;letter-spacing:.12em;display:block;line-height:1.05}.logo small{color:var(--gold);font-size:.6rem;letter-spacing:.2em}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}nav a{color:#d8e0f0;text-decoration:none;font-size:.9rem;font-weight:600}nav a:hover{color:var(--gold)}
+.hr{display:flex;align-items:center;gap:10px}.login{color:#fff;text-decoration:none;font-size:.88rem;font-weight:600}.burger{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+@media(max-width:1060px){.burger{display:block}.login{display:none}nav{position:absolute;left:0;right:0;top:100%;background:var(--navy);display:none;padding:8px 20px 18px}nav.open{display:block}nav ul{flex-direction:column;gap:0}nav li a{display:block;padding:13px 0;border-bottom:1px solid #263566}.hr .btn{padding:9px 15px;font-size:.82rem}}
+.banner{background:var(--gold);color:var(--navy);text-align:center;font-size:.85rem;font-weight:700;padding:8px 14px}.banner a{text-decoration:underline}
+.hero{background:radial-gradient(circle at 80% 20%,#3157A4 0,#101B3C 55%);color:#fff;padding:70px 0 100px;overflow:hidden}.hero h1{color:#fff}.hero h1 em{color:var(--gold);font-style:italic}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}.hero p{color:#cbd6ee;font-size:1.1rem;max-width:52ch}.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero svg{width:100%;max-width:460px;display:block;margin:auto}.fl{animation:fl 5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-12px)}}
+@media(max-width:860px){.hg{grid-template-columns:1fr}.hero svg{max-width:280px;order:-1}}
+.stats{margin-top:-56px;padding:0;position:relative}.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{background:var(--card);border-radius:18px;padding:24px;box-shadow:var(--shadow);border-bottom:3px solid var(--gold)}.sc strong{font-family:'Playfair Display',serif;font-size:2.3rem;color:var(--blue);display:block;line-height:1}.sc span{font-size:.9rem}.sc small{display:block;font-size:.68rem;color:var(--gold);font-weight:700;margin-top:4px}
+@media(max-width:900px){.sg{grid-template-columns:1fr 1fr}}
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}.pills span{background:var(--card);border:1px solid var(--line);padding:8px 16px;border-radius:99px;font-weight:600;font-size:.88rem}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}@media(max-width:860px){.ab{grid-template-columns:1fr}}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}@media(max-width:520px){.mv{grid-template-columns:1fr}}.mv div{background:var(--card);border-left:4px solid var(--gold);border-radius:14px;padding:16px;box-shadow:var(--shadow)}.mv h3{margin:0 0 .2em}.mv p{margin:0;font-size:.92rem}
+.grid{display:grid;gap:20px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr 1fr}
+@media(max-width:1020px){.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}}@media(max-width:620px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.tile{min-height:150px;border-radius:18px;display:flex;align-items:flex-end;padding:16px;color:#fff;font-weight:700;cursor:pointer;position:relative;overflow:hidden;border:0;text-align:left;font:inherit;font-weight:700;transition:transform .3s}.tile:hover{transform:scale(1.03)}
+.tile:before{content:"";position:absolute;right:-24px;top:-24px;width:110px;height:110px;border-radius:50%;border:2px solid rgba(212,175,101,.6)}.tile.tall{grid-row:span 2;min-height:320px}
+.card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}.card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.cimg{height:120px;display:grid;place-items:center;font-size:2.6rem}.cb{padding:20px;display:flex;flex-direction:column;flex:1}.cb p{margin:0 0 12px;font-size:.92rem;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.meta span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:2px 9px;font-size:.74rem;font-weight:600}
+.fee{font-weight:700;color:var(--blue);margin-bottom:12px}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .fee{color:var(--gold)}}.acts{display:flex;gap:8px;flex-wrap:wrap}
+.tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:26px}.tools input{max-width:300px}.chip{border:1.5px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:8px 16px;font:inherit;font-weight:600;font-size:.85rem;cursor:pointer}.chip.on{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+.demo{display:inline-block;background:rgba(212,175,101,.2);color:#8a6d2f;font-size:.68rem;padding:2px 9px;border-radius:99px;font-weight:700}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .demo{color:var(--gold)}}
+.fac{padding:24px;text-align:center}.fac .av{width:84px;height:84px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--gold);background:linear-gradient(135deg,var(--navy),var(--blue));border:3px solid var(--gold)}.fac p{margin:3px 0;font-size:.9rem}
+form{display:grid;gap:14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:620px){.row{grid-template-columns:1fr}}
+label{display:block;font-weight:700;font-size:.85rem;margin-bottom:5px;color:var(--head)}input,select,textarea{width:100%;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font:inherit}input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(49,87,164,.25)}
+.err{color:#c2362f;font-size:.78rem;min-height:1em;display:block}.invalid{border-color:#c2362f}.box{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow)}
+.ok{display:none;text-align:center;padding:24px 8px}.ok.show{display:block}.tick{width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:1.8rem;margin:0 auto 12px}
+.slots{display:flex;flex-wrap:wrap;gap:8px}.slots label{margin:0;font-weight:600}.slots input{display:none}.slots span{display:block;padding:9px 15px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-size:.88rem}.slots input:checked+span{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+.stars{color:var(--gold);letter-spacing:2px}.q{padding:22px}.q p{font-style:italic;margin:.5em 0}.q small{opacity:.75}
+.career{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:860px){.career{grid-template-columns:1fr 1fr}}@media(max-width:520px){.career{grid-template-columns:1fr}}.career div{padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--line)}.career b{color:var(--gold);font-family:'Playfair Display',serif;font-size:1.5rem}
+.note{font-size:.78rem;opacity:.75}
+.gr{background:var(--navy);color:#fff;border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;margin-top:30px}.gr h3{color:#fff}.gr p{color:#c3cfe8;margin:.3em 0 0;max-width:44ch}.big{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);line-height:1}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 20px;margin-bottom:11px}summary{cursor:pointer;font-weight:700;color:var(--head)}details p{margin:.6em 0 0}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:26px}@media(max-width:860px){.loc{grid-template-columns:1fr}}.map{min-height:260px;border-radius:22px;border:1px solid var(--line);background:repeating-linear-gradient(45deg,#3157a415 0 12px,transparent 12px 24px),var(--card);display:grid;place-items:center;text-align:center;padding:20px}
+.news{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}.news h3{color:#fff;margin:0}.news form{display:flex;gap:8px;flex-wrap:wrap}.news input{width:240px}
+footer{background:var(--navy);color:#b7c3de;padding:54px 0 22px;font-size:.9rem}footer h4{color:var(--gold);font-family:'Playfair Display',serif;margin:0 0 10px}.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:28px}@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}footer a{text-decoration:none}footer a:hover{color:var(--gold)}.legal{border-top:1px solid #263566;margin-top:26px;padding-top:16px;font-size:.78rem}
+.det h1{font-size:clamp(2rem,5vw,3.2rem)}.dh{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:56px 0}.dh h1{color:#fff}.dh p{color:#cbd6ee}.dg{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:start}@media(max-width:860px){.dg{grid-template-columns:1fr}}
+ol.syl{padding-left:0;list-style:none;counter-reset:s}ol.syl li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;margin-bottom:9px;position:relative}ol.syl li:before{content:counter(s);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+#lb{position:fixed;inset:0;background:rgba(10,18,48,.92);z-index:90;display:none;place-items:center;padding:20px}#lb.on{display:grid}#lb div{width:min(720px,100%);height:min(60vh,420px);border-radius:22px;display:flex;align-items:flex-end;padding:26px;color:#fff;font-family:'Playfair Display',serif;font-size:1.6rem}
+.fab{position:fixed;right:16px;z-index:60;border:0;border-radius:50%;width:56px;height:56px;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.3);font-size:1.5rem;color:#fff;cursor:pointer;text-decoration:none}.wa{bottom:calc(88px + env(safe-area-inset-bottom,0px));background:#25D366}.bt{bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--blue)}
+.chat{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:70;width:min(370px,calc(100vw - 32px));height:min(540px,72vh);background:var(--card);border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.35);display:none;flex-direction:column;overflow:hidden;border:1px solid var(--line)}.chat.open{display:flex}
+.ch{background:var(--navy);color:#fff;padding:13px 16px;display:flex;justify-content:space-between;align-items:center}.ch button{background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}.disc{font-size:.7rem;padding:6px 14px;background:rgba(212,175,101,.2)}
+.msgs{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:9px;font-size:.9rem}.m{max-width:86%;padding:9px 13px;border-radius:14px}.m.b{background:var(--bg);align-self:flex-start}.m.u{background:var(--blue);color:#fff;align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 8px}.chips button{border:1px solid var(--blue);background:none;color:var(--blue);border-radius:99px;padding:4px 10px;font-size:.75rem;cursor:pointer;font-family:inherit}.cin{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}.cin input{padding:10px}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .chips button{color:var(--gold);border-color:var(--gold)}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="banner">🎓 Admissions Open for the Next Batch (demo date) · <a href="#admission">Apply now</a></div>
+<header><div class="wrap nav">
+<a class="logo" href="#home" aria-label="Eliteora Academy home"><svg width="44" height="44" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#D4AF65" stroke-width="1.5"/><path d="M24 9L5 17l19 8 19-8z" fill="#D4AF65"/><path d="M12 21v6c0 3 5 5 12 5s12-2 12-5v-6l-12 5z" fill="#3157A4"/><path d="M8 37c5-3 11-3 16 0 5-3 11-3 16 0v3c-5-3-11-3-16 0-5-3-11-3-16 0z" fill="#fff"/></svg><span><b>ELITEORA</b><small>ACADEMY</small></span></a>
+<nav id="nav" aria-label="Main"><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#courses">Courses</a></li><li><a href="#faculty">Faculty</a></li><li><a href="#success">Student Success</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<div class="hr"><a class="login" href="#login-demo" id="lg">Student Login</a><a class="btn btn-gold sm" href="#admission">Apply Now</a><button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button></div></div></header>
+
+<div id="hv"><main id="home">
+<section class="hero"><div class="wrap hg"><div><span class="eyebrow">Eliteora Academy · Learn Today. Lead Tomorrow.</span>
+<h1 style="margin-top:12px">Unlock Your Potential. <em>Build Your Future.</em></h1>
+<p>Discover industry-relevant education, expert mentorship, and practical learning experiences designed to help you achieve your career goals.</p>
+<div class="ctas"><a class="btn btn-gold" href="#courses">Explore Our Courses</a><a class="btn btn-out" href="#admission">Apply for Admission</a></div></div>
+<div role="img" aria-label="Illustration of a graduation cap above an open book"><svg viewBox="0 0 440 400" class="fl"><circle cx="220" cy="200" r="170" fill="none" stroke="#D4AF65" stroke-opacity=".35"/><circle cx="220" cy="200" r="120" fill="#3157A4" fill-opacity=".45"/><path d="M220 70L80 130l140 60 140-60z" fill="#D4AF65"/><path d="M135 165v50c0 25 40 42 85 42s85-17 85-42v-50l-85 36z" fill="#fff" fill-opacity=".92"/><path d="M360 130v70" stroke="#D4AF65" stroke-width="5"/><circle cx="360" cy="208" r="9" fill="#D4AF65"/><path d="M90 300c45-25 90-25 130 0 40-25 85-25 130 0v40c-45-25-90-25-130 0-40-25-85-25-130 0z" fill="#fff"/><path d="M220 300v40" stroke="#101B3C" stroke-width="3"/></svg>
+<p class="note" style="color:#cbd6ee;text-align:center;margin:4px 0 0">Demo visual · replace with student photography</p></div></div></section>
+
+<section class="stats"><div class="wrap sg" id="stats"></div></section>
+<section style="padding:40px 0 0"><div class="wrap"><div class="pills"><span>🎯 Industry-Focused Learning</span><span>👩‍🏫 Experienced Faculty</span><span>🛠 Practical Training</span><span>🚀 Career Development Support</span></div></div></section>
+
+<section id="about"><div class="wrap ab"><div class="rv"><span class="eyebrow">About the academy</span><h2>Education That Goes Beyond Classrooms.</h2>
+<p class="lead">Eliteora Academy blends structured curriculum with real projects, mentoring and a supportive learning environment. We focus on skills students can actually use.</p>
+<div class="mv"><div><h3>Mission</h3><p>Make practical, career-focused education accessible and honest.</p></div><div><h3>Vision</h3><p>A community of confident learners who grow into leaders.</p></div><div><h3>Teaching philosophy</h3><p>Learn by doing, with feedback at every step.</p></div><div><h3>Learning environment</h3><p>Small batches, modern labs, friendly mentors.</p></div></div></div>
+<div class="grid g2" id="abg"></div></div></section>
+
+<section id="courses" class="alt"><div class="wrap"><div class="center"><span class="eyebrow">Programs</span><h2>Explore Our Courses</h2><p class="lead">Fees and durations are editable demo placeholders.</p></div>
+<div class="tools"><input id="cs" type="search" placeholder="Search courses…" aria-label="Search courses"><span id="cf" style="display:contents"></span></div>
+<div class="grid g4" id="cg"></div><p id="cn" class="center" style="display:none">No course matches your search.</p></div></section>
+
+<section id="faculty"><div class="wrap center"><h2>Expert Faculty</h2><p class="lead"><span class="demo">DEMO PROFILES</span> Fictional instructors. Replace with real faculty and verified credentials.</p><div class="grid g4" id="fg" style="text-align:left"></div></div></section>
+
+<section id="admission" class="alt"><div class="wrap" style="max-width:860px"><div class="center"><span class="eyebrow">Admissions</span><h2>Admission Inquiry</h2></div>
+<div class="box"><form id="af" novalidate>
+<div class="row"><div><label for="an">Full name</label><input id="an" autocomplete="name"><span class="err"></span></div><div><label for="ap">Mobile number</label><input id="ap" type="tel" autocomplete="tel"><span class="err"></span></div></div>
+<div class="row"><div><label for="ae">Email</label><input id="ae" type="email" autocomplete="email"><span class="err"></span></div><div><label for="ac">Interested course</label><select id="ac" class="cs"></select><span class="err"></span></div></div>
+<div class="row"><div><label for="aq">Educational qualification</label><select id="aq"><option value="">Select</option><option>10th / Secondary</option><option>12th / Higher Secondary</option><option>Diploma</option><option>Graduate</option><option>Post-graduate</option></select><span class="err"></span></div><div><label for="am">Learning mode</label><select id="am"><option value="">Select</option><option>Classroom</option><option>Online</option><option>Hybrid</option></select><span class="err"></span></div></div>
+<div class="row"><div><label for="ab">Preferred batch</label><select id="ab"><option value="">Select</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select><span class="err"></span></div><div><label for="ag">Message</label><input id="ag" placeholder="Optional"></div></div>
+<div class="acts"><button class="btn btn-blue" type="submit">Submit Inquiry</button><a class="btn btn-line" data-wa target="_blank" rel="noopener" href="#">Inquire on WhatsApp</a></div></form>
+<div class="ok" id="aok" role="status"><div class="tick">✓</div><h3>Inquiry received</h3><p id="aot"></p></div></div></div></section>
+
+<section id="counselling"><div class="wrap" style="max-width:860px"><div class="center"><span class="eyebrow">Free session</span><h2>Book Free Counselling</h2></div>
+<div class="box"><form id="kf" novalidate>
+<div class="row"><div><label for="kc">Course</label><select id="kc" class="cs"></select><span class="err"></span></div><div><label for="kd">Preferred date</label><input id="kd" type="date"><span class="err"></span></div></div>
+<div><label>Available time slots</label><div class="slots" id="ks"></div><span class="err" id="kse"></span></div>
+<div class="row"><div><label for="kn">Name</label><input id="kn"><span class="err"></span></div><div><label for="kp">Phone</label><input id="kp" type="tel"><span class="err"></span></div></div>
+<button class="btn btn-gold" type="submit">Request Free Counselling</button></form>
+<div class="ok" id="kok" role="status"><div class="tick">✓</div><h3>Session requested</h3><p id="kot"></p></div></div></div></section>
+
+<section id="success" class="alt"><div class="wrap center"><h2>Student Success Stories</h2><p class="lead"><span class="demo">SAMPLE DEMO TESTIMONIALS</span> These are fictional and are not real graduates.</p>
+<div class="grid g3" id="sg" style="text-align:left"></div></div></section>
+
+<section id="career"><div class="wrap"><div class="center"><span class="eyebrow">Career support</span><h2>Placement &amp; Career Support</h2><p class="lead">We guide and prepare you. We do not guarantee jobs or claim hiring partnerships.</p></div>
+<div class="career" id="cr"></div></div></section>
+
+<section id="gallery" class="alt"><div class="wrap center"><h2>Campus &amp; Learning Gallery</h2><p class="lead">Tap any tile to enlarge. Demo tiles: replace with real photos.</p><div class="grid g3" id="gg" style="text-align:left"></div></div></section>
+
+<section><div class="wrap center"><h2>Student Reviews</h2><p class="lead"><span class="demo">DEMO REVIEWS</span></p><div class="grid g3" id="rg" style="text-align:left"></div>
+<div class="gr" style="text-align:left"><div><h3>Google Reviews</h3><p>Connect your Google Business Profile in the CONFIG to show a genuine rating and count. Nothing is displayed until real data is added.</p></div><div><div class="big" id="gv">–</div><div class="stars" id="gst"></div><small id="gct">Not connected</small></div><div class="acts"><a class="btn btn-gold" id="gl" target="_blank" rel="noopener" href="#">Read Google Reviews</a><a class="btn btn-out" id="gw" target="_blank" rel="noopener" href="#">Write a Review</a></div></div></div></section>
+
+<section class="alt"><div class="wrap" style="max-width:820px"><h2 class="center">Frequently Asked Questions</h2><div id="fq"></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="center"><h2>Contact &amp; Location</h2></div><div class="loc">
+<div class="map"><div><p style="font-size:2.2rem;margin:0">📍</p><p>Map placeholder. Add your Google Maps embed in the CONFIG.</p><a class="btn btn-blue" id="dir" target="_blank" rel="noopener" href="#">Get Directions</a></div></div>
+<div class="box"><p><b>Address:</b> <span data-addr></span></p><p><b>Phone:</b> <a data-tel href="#"><span data-ph></span></a></p><p><b>Email:</b> <a data-mail href="#"><span data-em></span></a></p><p><b>Hours:</b> <span data-hrs></span></p><p><a class="btn btn-gold sm" data-wa target="_blank" rel="noopener" href="#">WhatsApp us</a></p>
+<form id="tf" novalidate><div><label for="tn">Name</label><input id="tn"><span class="err"></span></div><div><label for="tm">Message</label><textarea id="tm" rows="3"></textarea><span class="err"></span></div><button class="btn btn-blue" type="submit">Send message</button><p id="tok" role="status" style="margin:0;font-weight:700;color:var(--blue)"></p></form></div></div>
+<div class="news" style="margin-top:40px"><div><h3>Join our newsletter</h3><p style="margin:.3em 0 0;color:#c3cfe8">Course updates and learning tips. No spam.</p></div><form id="nf" novalidate><input id="ne" type="email" placeholder="Your email" aria-label="Email"><button class="btn btn-gold" type="submit">Subscribe</button><span id="nm" role="status" style="width:100%;font-weight:700"></span></form></div></div></section>
+</main></div>
+
+<div id="cv" style="display:none"></div>
+
+<footer><div class="wrap"><div class="fg"><div><a class="logo" href="#home"><b>ELITEORA</b></a><p>Learn Today. Lead Tomorrow. A demo professional education institute.</p><p>Instagram · Facebook · LinkedIn · YouTube</p></div>
+<div><h4>Quick links</h4><ul><li><a href="#about">About</a></li><li><a href="#courses">Courses</a></li><li><a href="#admission">Admission</a></li><li><a href="#counselling">Counselling</a></li></ul></div>
+<div><h4>Categories</h4><ul><li>Technology</li><li>Creative</li><li>Business</li><li>Communication</li></ul></div>
+<div><h4>Contact</h4><p data-addr></p><p data-ph></p><p data-em></p></div></div>
+<div class="legal"><a href="#privacy-demo">Privacy Policy</a> · <a href="#terms-demo">Terms &amp; Conditions</a><p>Demo website. All names, fees, statistics and reviews are placeholders. No accreditation, affiliation or placement result is claimed.</p></div></div></footer>
+
+<div id="lb" role="dialog" aria-label="Gallery preview"><div id="lbi"></div></div>
+<a class="fab wa" data-wa target="_blank" rel="noopener" href="#" aria-label="WhatsApp">💬</a><button class="fab bt" id="bb" aria-label="Open AI student support">🎓</button>
+<div class="chat" id="chat" role="dialog" aria-label="AI student support"><div class="ch"><b>Eliteora AI Assistant · 24/7</b><button id="cx" aria-label="Close">×</button></div><div class="disc">I’m an AI assistant, not a human. For complex questions I can connect you on WhatsApp.</div><div class="msgs" id="ms"></div><div class="chips" id="cc"></div><form class="cin" id="ci"><input id="cp" placeholder="Ask about courses, fees, timings…" aria-label="Message"><button class="btn btn-blue sm" type="submit">Send</button></form></div>
+
+<script>
+/* ===== EDIT THESE DEMO PLACEHOLDERS ===== */
+const CFG={phone:"+91 00000 00000",tel:"+910000000000",wa:"910000000000",email:"admissions@example.com",addr:"45 Demo Avenue, Your City, State 000000",map:"Your academy address",hours:"Mon–Sat 9:00 AM – 7:00 PM",
+google:{rating:null,count:null,read:"https://www.google.com/maps",write:"https://www.google.com/maps"},
+stats:[[1200,"Students enrolled"],[8,"Courses available"],[15,"Expert instructors"],[900,"Successful graduates"]]};
+const FAC=[["Prof. A. Nair","MBA (Demo)","Marketing & Business","10 yrs"],["Er. R. Khanna","B.Tech (Demo)","Web & Data","9 yrs"],["Ms. S. D’Souza","MFA (Demo)","Design","8 yrs"],["Dr. V. Rao","PhD (Demo)","AI & Analytics","12 yrs"]];
+const SY={dm:["Digital marketing foundations","SEO and content","Social media and paid ads","Email, analytics and reporting","Live client-style project"],wd:["HTML, CSS and responsive design","JavaScript essentials","Front-end frameworks","Backend and databases","Capstone website"],gd:["Design principles and colour","Typography and layout","Illustration and branding","UI design basics","Portfolio project"],da:["Spreadsheets and statistics","SQL for analysis","Python for data","Dashboards and storytelling","Case-study project"],ai:["AI concepts and ethics","Python for AI","Machine learning basics","Using AI tools at work","Mini AI project"],se:["Pronunciation and fluency","Everyday conversation","Vocabulary and grammar","Presentation and interviews","Mock speaking tests"],ca:["Computer fundamentals","Office productivity tools","Internet and email","Basic accounting software","Practical assessment"],bm:["Management basics","Marketing and sales","Finance fundamentals","Leadership and teamwork","Business plan project"]};
+const C=[["dm","Digital Marketing","Business","📣","Learn SEO, social media, ads and analytics for real businesses.","3 months","Hybrid","Beginner","₹00,000",0],["wd","Web Development","Technology","💻","Build responsive websites from HTML to full projects.","4 months","Classroom","Beginner","₹00,000",1],["gd","Graphic Design","Creative","🎨","Design logos, posts and brand identity with professional tools.","3 months","Classroom","Beginner","₹00,000",2],["da","Data Analytics","Technology","📊","Turn data into insight using spreadsheets, SQL and dashboards.","4 months","Online","Intermediate","₹00,000",3],["ai","Artificial Intelligence","Technology","🤖","Understand AI and use it responsibly in work and study.","3 months","Online","Intermediate","₹00,000",3],["se","Spoken English","Communication","🗣","Speak confidently at work, in interviews and daily life.","2 months","Hybrid","Beginner","₹00,000",2],["ca","Computer Applications","Technology","🖥","Core computer skills and office tools for any career.","3 months","Classroom","Beginner","₹00,000",1],["bm","Business Management","Business","📈","Management, sales and finance basics for aspiring leaders.","4 months","Hybrid","Intermediate","₹00,000",0]];
+const GR=["linear-gradient(135deg,#101B3C,#3157A4)","linear-gradient(135deg,#3157A4,#101B3C)","linear-gradient(135deg,#8a6d2f,#101B3C)","linear-gradient(135deg,#1f2f66,#D4AF65)"];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const wa=t=>"https://wa.me/"+CFG.wa+"?text="+encodeURIComponent(t||"Hello Eliteora Academy, I would like to know about admissions.");
+$$("[data-ph]").forEach(e=>e.textContent=CFG.phone);$$("[data-tel]").forEach(e=>e.href="tel:"+CFG.tel);$$("[data-em]").forEach(e=>e.textContent=CFG.email);$$("[data-mail]").forEach(e=>e.href="mailto:"+CFG.email);$$("[data-addr]").forEach(e=>e.textContent=CFG.addr);$$("[data-hrs]").forEach(e=>e.textContent=CFG.hours);$$("[data-wa]").forEach(e=>e.href=wa());
+$("#dir").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(CFG.map);
+$("#stats").innerHTML=CFG.stats.map(s=>`<div class="sc"><strong data-n="${s[0]}">0</strong><span>${s[1]}</span><small>DEMO VALUE</small></div>`).join("");
+$("#abg").innerHTML=["Modern Classroom","Computer Lab","Workshop","Student Activity"].map((t,i)=>`<div class="tile ${i==0?"tall":""}" style="background:${GR[i]}">${t}</div>`).join("");
+$("#cf").innerHTML=["All","Technology","Business","Creative","Communication"].map((c,i)=>`<button class="chip ${i?"":"on"}" data-c="${c}">${c}</button>`).join("");
+let cat="All";
+function drawCourses(){const q=$("#cs").value.toLowerCase();const l=C.filter(c=>(cat=="All"||c[2]==cat)&&(c[1]+c[4]).toLowerCase().includes(q));$("#cn").style.display=l.length?"none":"block";
+$("#cg").innerHTML=l.map(c=>`<article class="card"><div class="cimg" style="background:${GR[c[9]]}">${c[3]}</div><div class="cb"><h3>${c[1]}</h3><div class="meta"><span>⏱ ${c[5]}</span><span>${c[6]}</span><span>${c[7]}</span></div><p>${c[4]}</p><div class="fee">${c[8]} <span class="demo">DEMO FEE</span></div><div class="acts"><a class="btn btn-line sm" href="#course-${c[0]}">View Details</a><button class="btn btn-gold sm" data-enq="${c[1]}">Enquire Now</button></div></div></article>`).join("")}
+$$("#cf .chip").forEach(b=>b.onclick=()=>{cat=b.dataset.c;$$("#cf .chip").forEach(x=>x.classList.toggle("on",x==b));drawCourses()});$("#cs").oninput=drawCourses;drawCourses();
+document.addEventListener("click",e=>{const b=e.target.closest("[data-enq]");if(b){go("admission");$("#ac").value=b.dataset.enq}});
+$$(".cs").forEach(s=>s.innerHTML='<option value="">Select course</option>'+C.map(c=>`<option>${c[1]}</option>`).join(""));
+$("#fg").innerHTML=FAC.map(f=>`<article class="card fac"><div class="av">${f[0].split(" ").pop()[0]}${f[0][0]}</div><span class="demo">DEMO</span><h3 style="margin-top:8px">${f[0]}</h3><p>${f[1]}</p><p><b>${f[2]}</b></p><p>${f[3]} experience (demo)</p><p style="font-size:.85rem">Passionate about practical, project-based teaching.</p></article>`).join("");
+$("#sg").innerHTML=[["Sample Student A","Web Development","Built my first client-style website and gained real confidence."],["Sample Student B","Digital Marketing","Practical projects made the concepts click for me."],["Sample Student C","Spoken English","I now speak in meetings without fear."]].map((s,i)=>`<article class="card q"><div class="fac" style="padding:0;text-align:left"><div class="av" style="width:56px;height:56px;font-size:1.2rem;margin:0 0 8px">${"ABC"[i]}</div></div><b>${s[0]}</b> · <small>${s[1]}</small><p>“${s[2]}”</p><span class="demo">FICTIONAL SAMPLE</span></article>`).join("");
+$("#cr").innerHTML=[["Career guidance","One-to-one direction on paths that fit you."],["Resume development","Clear, honest resumes and portfolios."],["Interview preparation","Mock interviews and feedback."],["Internship guidance","Help finding and applying to internships."],["Job assistance","Job-search strategy and application support."],["Industry exposure","Workshops and guest sessions (demo)."]].map((c,i)=>`<div><b>0${i+1}</b><h3>${c[0]}</h3><p style="margin:0">${c[1]}</p></div>`).join("");
+const GAL=["Modern Classrooms","Computer Labs","Training Sessions","Student Activities","Workshops","Events"];
+$("#gg").innerHTML=GAL.map((t,i)=>`<button class="tile" style="background:${GR[i%4]}" data-g="${i}">${t}</button>`).join("");
+$$("[data-g]").forEach(b=>b.onclick=()=>{const i=+b.dataset.g;$("#lbi").style.background=GR[i%4];$("#lbi").textContent=GAL[i]+" (demo image)";$("#lb").classList.add("on")});$("#lb").onclick=()=>$("#lb").classList.remove("on");
+$("#rg").innerHTML=[["Sample Reviewer 1","Graphic Design","20 Oct 2026",5,"Mentors were patient and the projects were useful."],["Sample Reviewer 2","Data Analytics","02 Oct 2026",5,"Clear syllabus and helpful doubt sessions."],["Sample Reviewer 3","Computer Applications","18 Sep 2026",4,"Good lab access and friendly staff."]].map(r=>`<article class="card q"><div class="stars">${"★".repeat(r[3])}${"☆".repeat(5-r[3])}</div><p>“${r[4]}”</p><b>${r[0]}</b><br><small>${r[1]} · ${r[2]} · demo</small></article>`).join("");
+const G=CFG.google;if(G.rating){$("#gv").textContent=G.rating.toFixed(1);$("#gst").textContent="★".repeat(Math.round(G.rating));$("#gct").textContent=G.count+" Google reviews"}$("#gl").href=G.read;$("#gw").href=G.write;
+const FQ=[["How can I enroll?","Submit the admission inquiry form, call us, or use WhatsApp. Our team will guide you."],["What courses are available?",C.map(c=>c[1]).join(", ")+"."],["Do you provide certificates?","Certificate details are set by the academy (edit this answer). No external accreditation is claimed in this demo."],["Are installment payment options available?","Edit this answer with your real fee policy."],["Do you offer online courses?","Yes, selected courses run online or hybrid. See each course card."],["How can I book counselling?","Use the Free Counselling form on this page."],["What is the admission process?","1) Inquiry. 2) Counselling. 3) Course selection and registration. 4) Batch start."]];
+$("#fq").innerHTML=FQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("");
+/* slots */
+$("#ks").innerHTML=["10:00 AM","12:00 PM","03:00 PM","05:00 PM","06:30 PM"].map(t=>`<label><input type="radio" name="slot" value="${t}"><span>${t}</span></label>`).join("");
+$("#kd").min=new Date().toISOString().split("T")[0];
+/* nav */
+$("#bg").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o)};$$("#nav a").forEach(a=>a.addEventListener("click",()=>$("#nav").classList.remove("open")));
+/* counters & reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);if(e.target.dataset.n){const n=+e.target.dataset.n;let t0;const st=ts=>{t0=t0||ts;const p=Math.min((ts-t0)/1200,1);e.target.textContent=Math.floor(n*p).toLocaleString()+(p==1?"+":"");if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}else e.target.classList.add("in")}),{threshold:.2});
+$$("[data-n],.rv").forEach(e=>io.observe(e));
+/* validation */
+function se(el,m){el.classList.toggle("invalid",!!m);const s=el.parentElement.querySelector(".err");if(s)s.textContent=m||""}
+function chk(rules){let ok=true;rules.forEach(([id,t,m])=>{const el=$(id),bad=!t(el.value.trim());se(el,bad?m:"");if(bad)ok=false});return ok}
+const PH=x=>/^[+]?\d[\d\s-]{8,13}$/.test(x),EM=x=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x),NM=x=>x.length>=2,RQ=x=>!!x;
+function doneForm(f,o,t,msg){$(f).style.display="none";$(t).textContent=msg+" (Demo: connect this form to your email or CRM.)";$(o).classList.add("show")}
+$("#af").onsubmit=e=>{e.preventDefault();if(chk([["#an",NM,"Enter your name."],["#ap",PH,"Enter a valid mobile number."],["#ae",EM,"Enter a valid email."],["#ac",RQ,"Choose a course."],["#aq",RQ,"Select qualification."],["#am",RQ,"Select a mode."],["#ab",RQ,"Select a batch."]]))doneForm("#af","#aok","#aot",`Thank you, ${$("#an").value.trim()}. We will contact you about ${$("#ac").value}.`)};
+$("#kf").onsubmit=e=>{e.preventDefault();let ok=chk([["#kc",RQ,"Choose a course."],["#kd",RQ,"Pick a date."],["#kn",NM,"Enter your name."],["#kp",PH,"Enter a valid phone."]]);const sl=document.querySelector("[name=slot]:checked");$("#kse").textContent=sl?"":"Select a time slot.";if(ok&&sl)doneForm("#kf","#kok","#kot",`Thank you, ${$("#kn").value.trim()}. Your free counselling for ${$("#kc").value} is requested for ${$("#kd").value} at ${sl.value}.`)};
+$("#tf").onsubmit=e=>{e.preventDefault();if(chk([["#tn",NM,"Enter your name."],["#tm",RQ,"Write a message."]])){$("#tok").textContent="Message sent. (Demo)";$("#tf").reset()}};
+$("#nf").onsubmit=e=>{e.preventDefault();const ok=EM($("#ne").value.trim());$("#nm").textContent=ok?"Subscribed. Thank you! (Demo)":"Enter a valid email.";if(ok)$("#nf").reset()};
+$("#lg").onclick=e=>{e.preventDefault();alert("Student login is a demo placeholder. Connect your LMS or portal here.")};
+/* routing */
+function go(id){location.hash=id;route()}
+function route(){const h=location.hash.slice(1);if(h.startsWith("course-")){const c=C.find(x=>"course-"+x[0]==h);if(c){showCourse(c);return}}
+$("#hv").style.display="block";$("#cv").style.display="none";if(h){const el=document.getElementById(h);if(el)setTimeout(()=>el.scrollIntoView(),0)}else window.scrollTo(0,0)}
+function showCourse(c){const f=FAC[c[9]];$("#hv").style.display="none";$("#cv").style.display="block";window.scrollTo(0,0);document.title=c[1]+" | Eliteora Academy";
+$("#cv").innerHTML=`<div class="det"><div class="dh"><div class="wrap"><a href="#courses" style="color:var(--gold);font-weight:700;text-decoration:none">← All courses</a><h1 style="margin-top:12px">${c[3]} ${c[1]}</h1><p style="max-width:60ch">${c[4]}</p><div class="meta"><span style="color:var(--navy)">⏱ ${c[5]}</span><span style="color:var(--navy)">${c[6]}</span><span style="color:var(--navy)">${c[7]}</span><span style="color:var(--navy)">${c[8]} (demo fee)</span></div></div></div>
+<section><div class="wrap dg"><div><h2>Course overview</h2><p>This ${c[5]} ${c[7].toLowerCase()}-level program combines guided lessons with hands-on practice, delivered in ${c[6].toLowerCase()} mode.</p>
+<h2>Learning objectives</h2><ul>${SY[c[0]].slice(0,4).map(s=>`<li>Gain working skill in: ${s.toLowerCase()}</li>`).join("")}</ul>
+<h2>Complete syllabus</h2><ol class="syl">${SY[c[0]].map(s=>`<li>${s}</li>`).join("")}</ol>
+<h2>Training format</h2><p>Instructor-led sessions, practical assignments, regular feedback and a final project. Format: ${c[6]}.</p>
+<h2>Instructor</h2><p><b>${f[0]}</b> · ${f[1]} · ${f[2]} · ${f[3]} <span class="demo">DEMO</span></p>
+<h2>FAQ</h2><details><summary>Who can join?</summary><p>${c[7]} learners. Edit prerequisites as needed.</p></details><details><summary>Is a certificate provided?</summary><p>Edit with your real certification policy.</p></details></div>
+<div class="box" style="position:sticky;top:90px"><h3>Admission inquiry</h3><form id="df" novalidate><div><label for="dn">Name</label><input id="dn"><span class="err"></span></div><div><label for="dp">Mobile</label><input id="dp" type="tel"><span class="err"></span></div><button class="btn btn-gold" type="submit">Enquire about ${c[1]}</button></form><div class="ok" id="dok" role="status"><div class="tick">✓</div><p>Thanks! We will contact you. (Demo)</p></div><p class="note" style="margin-top:10px"><a data-wa target="_blank" rel="noopener" href="${wa("Hello, I want details about "+c[1])}">Ask on WhatsApp</a></p></div></div></section></div>`;
+$("#df").onsubmit=e=>{e.preventDefault();if(chk([["#dn",NM,"Enter your name."],["#dp",PH,"Enter a valid mobile."]])){$("#df").style.display="none";$("#dok").classList.add("show")}}}
+addEventListener("hashchange",route);route();
+/* chatbot */
+const ms=$("#ms");let flow=null;
+function say(t,c){const d=document.createElement("div");d.className="m "+c;d.textContent=t;ms.appendChild(d);ms.scrollTop=ms.scrollHeight}
+const QA=[[/apply|admission|enrol|enroll|inquiry|enquiry/,"start"],[/fee|cost|price/,"Course fees are set per course (see course cards). Demo fees are placeholders. For exact fees, WhatsApp us."],[/duration|how long|month/,"Durations range from 2 to 4 months depending on the course."],[/online|hybrid|mode/,"Yes. Selected courses run online, classroom or hybrid. Check each course card."],[/timing|hour|open/,"Academy hours: "+CFG.hours+"."],[/counsel/,"Free counselling is available. Use the Book Free Counselling section to pick a date and slot."],[/course|program|available/,"Courses: "+C.map(c=>c[1]).join(", ")+"."],[/contact|phone|email|address|where|location/,"Call "+CFG.phone+", email "+CFG.email+", visit "+CFG.addr+", or tap the WhatsApp button."],[/human|agent|whatsapp|person/,"wa"],[/hi$|hello|hey/,"Hello! Ask me about courses, fees, duration, timings or admission."]];
+function ask(t){say(t,"u");
+if(flow){if(flow.s==0){flow.n=t;flow.s=1;return setTimeout(()=>say("Thanks. Your mobile number?","b"),300)}
+if(flow.s==1){if(!PH(t))return setTimeout(()=>say("Please enter a valid mobile number.","b"),300);flow.p=t;flow.s=2;return setTimeout(()=>say("Which course are you interested in?","b"),300)}
+flow.c=t;const f=flow;flow=null;return setTimeout(()=>say(`Thank you ${f.n}! Your inquiry about “${f.c}” is noted. We will call ${f.p}. (Demo: connect to your CRM.)`,"b"),300)}
+const q=t.toLowerCase(),m=QA.find(x=>x[0].test(q));setTimeout(()=>{if(!m)say("I’m not sure about that. I can connect you with the team on WhatsApp, or help with courses, fees, timings and admission.","b");else if(m[1]=="start"){flow={s:0};say("Happy to help you apply. What is your full name?","b")}else if(m[1]=="wa"){say("Opening WhatsApp so the team can help.","b");open(wa("Hello, I need help from the Eliteora team."),"_blank","noopener")}else say(m[1],"b")},300)}
+$("#cc").innerHTML=["Courses","Fees","Apply","Timings","Talk on WhatsApp"].map(t=>`<button type="button">${t}</button>`).join("");$$("#cc button").forEach(b=>b.onclick=()=>ask(b.textContent));
+$("#ci").onsubmit=e=>{e.preventDefault();const v=$("#cp").value.trim();if(v){$("#cp").value="";ask(v)}};
+$("#bb").onclick=()=>{$("#chat").classList.toggle("open");if(!ms.children.length)say("Hi! I’m Eliteora’s AI assistant. How can I help today?","b")};$("#cx").onclick=()=>$("#chat").classList.remove("open");
+</script>
+</body>
+</html>
